@@ -15,7 +15,7 @@ func DirHash(rootPath string) (string, error) {
 		if err != nil {
 			return err
 		}
-		//Note: 文字列を書き込むことが確定しているのでWriteStringを使っている
+		//Note: 文字列を書き込むことが確定しているので、最初だけWriteStringを使っている
 		io.WriteString(hash, path)
 		fmt.Fprintf(hash, "%v", info.IsDir())
 		fmt.Fprintf(hash, "%v", info.ModTime())
